@@ -1,5 +1,6 @@
 import React from 'react';
-import '../index.css'
+import '../index.css';
+import './Header.css';
 
 function Header() {
     let timeOfDay = '';
