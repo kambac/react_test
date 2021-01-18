@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Checkbox from './components/Checkbox';
+import Contacts from './components/Contacts'
 import Footer from './components/Footer';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
             <Checkbox />
             <Checkbox />
             <Checkbox />
+            <Contacts />
             <Footer />
         </div>
     )

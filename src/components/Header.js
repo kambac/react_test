@@ -2,13 +2,22 @@ import React from 'react';
 import '../index.css';
 import './Header.css';
 
-function Header() {
+function _setCurrentTime(currentTime, timeOfDay) {
+    if (currentTime < 12 && currentTime > 6) {
+        timeOfDay = 'morning';
+    } else if (currentTime >= 12 && currentTime < 18){
+        timeOfDay = 'afternoon';
+    } else {
+        timeOfDay = 'night';
+    }
+}
+
+const Header = () => {
     let timeOfDay = '';
     const date = new Date();
     const currentTime = date.getHours();
 
-    (currentTime < 12) ? (timeOfDay = 'morning') : (timeOfDay = 'night');
-
+    _setCurrentTime(currentTime, timeOfDay);
 
     return (
         <div>
