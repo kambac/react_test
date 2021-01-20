@@ -1,29 +1,17 @@
 import React from 'react';
 import ContactCard from './ContactCard';
+import {CardData} from '../resources/CardData'
 
 const Contacts = () => {
-    return (
-        <div>
-            <ContactCard
-                name={'Mr. Butter'}
-                imgSrc={'http://placekitten.com/300/200'}
-                telephone={'123456123'}
-                email={'email@wp.pl'}
-            />
-            <ContactCard
-                name={'Mr. Butter'}
-                imgSrc={'http://placekitten.com/300/200'}
-                telephone={'123456123'}
-                email={'email@wp.pl'}
-            />
-            <ContactCard
-                name={'Mr. Butter'}
-                imgSrc={'http://placekitten.com/300/200'}
-                telephone={'123456123'}
-                email={'email@wp.pl'}
-            />
-        </div>
-    )
+    return CardData.map((card, index) => 
+        <ContactCard 
+            key={index}
+            name={card.name} 
+            imgSrc={card.imgSrc} 
+            telephone={card.telephone} 
+            email={card.email}
+        />
+    );
 };
 
 export default Contacts;
