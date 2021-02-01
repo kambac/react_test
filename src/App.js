@@ -10,7 +10,6 @@ function App() {
             <Header />
             <Checkbox />
             <Checkbox />
-            <Checkbox />
             <Contacts />
             <Footer />
         </div>
